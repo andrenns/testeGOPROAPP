@@ -11,7 +11,7 @@ public class WakeOnLan {
 
     private static byte[] getMacBytes(String mac) throws IllegalArgumentException {
         Log.d("GetMacBytes", "method started");
-// TODO Auto-generated method stub
+
         byte[] bytes = new byte[6];
         try {
             String hex;

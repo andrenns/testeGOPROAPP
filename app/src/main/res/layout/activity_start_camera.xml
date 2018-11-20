@@ -7,11 +7,11 @@
     android:orientation="vertical" >
 
 
-  <!--  <EditText
+    <!--<EditText
         android:id="@+id/urlImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Paste URL to download image"/>
+        android:hint="Paste URL to download image"/>-->
 
     <Button
         android:onClick="search_button"
@@ -20,7 +20,7 @@
         android:layout_gravity="center_horizontal|center"
         android:text="Click here to download photo!"
         android:id="@+id/button_search"
-       />
+        />
 
     <Button
         android:layout_width="wrap_content"
@@ -30,21 +30,6 @@
         android:id="@+id/turn_on"
         android:onClick="turnOn"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|center"
-        android:text="Turn off GoPro"
-        android:id="@+id/turn_off"
-        android:onClick="turnOff"/>-->
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start the APP"
-        android:layout_gravity="center"
-        android:id="@+id/startButton"
-        android:onClick="startApp"/>
 
 
 

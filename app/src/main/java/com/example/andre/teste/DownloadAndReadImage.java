@@ -52,7 +52,6 @@ public class DownloadAndReadImage {
                 int bytesRead = 0;
                 while ((bytesRead = input.read(buffer, 0, buffer.length)) >= 0)
                 {
-                    WakeOnLan.wakeup("10.5.5.255", "28:80:23:F6:E2:3D");
                     output.write(buffer, 0, bytesRead);
                 }
             }

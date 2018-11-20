@@ -62,7 +62,11 @@ String path ;
 
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
+    }
 
     public void turnOff(View view){
 

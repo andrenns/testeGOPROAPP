@@ -26,7 +26,7 @@ public class DownloadAndReadImage {
     // pass image url and Pos for example i:
     DownloadAndReadImage(String url, ContextWrapper con)
     {
-        this.strURL=url;
+        this.strURL="http://10.5.5.9:8080/videos/DCIM/100GOPRO/" + url + ".JPG";
         this.con=con;
 
     }

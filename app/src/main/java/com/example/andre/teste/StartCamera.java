@@ -21,8 +21,6 @@ import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
 public class StartCamera extends AppCompatActivity {
     private String url;
    private URL myUrl;
-    HttpClient httpclient;
-    HttpPost httppost;
     ContextWrapper con;
     StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
     private EditText urlText;
@@ -30,8 +28,6 @@ public class StartCamera extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_camera);
-        httpclient = new DefaultHttpClient();
-        httppost = new HttpPost("http://10.5.5.9/gp/gpControl/command/system/sleep");
          con = new ContextWrapper(getApplicationContext());
         StrictMode.setThreadPolicy(policy);
         urlText = findViewById(R.id.urlImage);
@@ -47,37 +43,6 @@ public class StartCamera extends AppCompatActivity {
 
     }
 
-    public void turnOff(View view) {
-
-        try {
-            httpclient.execute(httppost);
-        }
-        catch(IOException e)
-        {
-            Toast.makeText(con,"Failure!", Toast.LENGTH_LONG).show();
-
-        }
-/*
-        client.get("http://10.5.5.9/gp/gpControl/command/system/sleep", new TextHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, String res) {
-                Toast.makeText(con,"Sucess!", Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, String res, Throwable t) {
-                Toast.makeText(con,"Failure!", Toast.LENGTH_LONG).show();
-            }
-        });
-
-       String webID = "http://10.5.5.9/gp/gpControl/command/system/sleep";
-        Intent bIntent = new Intent();
-        bIntent.setAction(Intent.ACTION_VIEW);
-        bIntent.addCategory(Intent.CATEGORY_BROWSABLE);
-        bIntent.setData(Uri.parse(webID));
-        startActivity(bIntent);*/
-        //new HttpAsyncTask().execute("http://10.5.5.9/gp/gpControl/command/system/sleep");
-    }
 
     public void search_button(View view) {
 
